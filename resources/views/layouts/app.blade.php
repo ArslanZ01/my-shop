@@ -17,6 +17,9 @@
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+
+        <!-- Custom Styles -->
+{{--        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">--}}
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
@@ -42,5 +45,11 @@
         @stack('modals')
 
         @livewireScripts
+
+        <!-- Custom Scripts -->
+        <script src="{{ asset('js/jquery.min.js') }}"></script>
+{{--        <script src="https://cdn.tailwindcss.com"></script>--}}
+{{--        <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>--}}
+
     </body>
 </html>

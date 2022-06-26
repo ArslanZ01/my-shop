@@ -14,16 +14,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('user_roles', function (Blueprint $table) {
+        Schema::create('product_categories', function (Blueprint $table) {
             $table->integer('id')->unsigned()->primary();
             $table->string('name');
+            $table->timestamps();
         });
 
-        DB::table('user_roles')->insert([
+        DB::table('product_categories')->insert([
             [ 'id' => 0, 'name' => 'Empty' ],
-            [ 'id' => 1, 'name' => 'Root' ],
-            [ 'id' => 2, 'name' => 'Admin' ],
-            [ 'id' => 3, 'name' => 'Shop' ],
         ]);
     }
 
@@ -34,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_roles');
+        Schema::dropIfExists('product_categories');
     }
 };

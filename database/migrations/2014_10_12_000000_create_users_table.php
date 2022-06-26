@@ -32,7 +32,7 @@ return new class extends Migration
         DB::table('users')->insert([
             [ 'name' => 'Root', 'username' => 'root', 'email'=>'root@email.com', 'password'=>Hash::make('root123'), 'role'=>'1' ],
             [ 'name' => 'Admin', 'username' => 'admin', 'email'=>'admin@email.com', 'password'=>Hash::make('admin123'), 'role'=>'2' ],
-            [ 'name' => 'Shop', 'username' => 'admin', 'email'=>'shop@email.com', 'password'=>Hash::make('shop123'), 'role'=>'3' ],
+            [ 'name' => 'Shop', 'username' => 'shop', 'email'=>'shop@email.com', 'password'=>Hash::make('shop123'), 'role'=>'3' ],
         ]);
 
     }
